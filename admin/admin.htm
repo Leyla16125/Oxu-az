@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Oxu.az</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="../admin/admin.css">
+    </head>
+    <body>
+        <div id="all">
+            <div id="text"><h3>Admin Panel</h3></div>
+            <div id="news">
+                <div class="content">
+                    <button onclick="toggleForm()" id="addForm">Xəbər yerləşdir</button>
+                    <h1>Xəbərlər</h1>
+                </div>                  
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Şəkil</th>
+                            <th>Başlıq</th>
+                            <th>Mətn</th>
+                            <th>Tarix</th>
+                            <th>Baxış sayı</th>
+                            <th>Sil</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tbl">
+
+                    </tbody>
+                </table>
+
+                <div id="formContainer" class="hidden">      
+               
+                    <form>
+                        <div id="formHeader">
+                            <h2>Xəbər yerləşdir</h2>
+                            <i onclick="toggleForm()" class="fa-solid fa-xmark"></i>
+                          </div>
+                          
+                        <label>Başlıq əlavə et:</label>
+                        <input type="text" id="title" />
+                  
+                        <label>Mətn əlavə et:</label>
+                        <textarea id="content" ></textarea>
+                  
+                        <label>Şəkil əlavə et:</label>
+                        <input type="text" id="image" />
+                  
+                        <label>Tarix əlavə et:</label>
+                        <input type="date" id="date" />
+                  
+                        <label>Baxış sayı:</label>
+                        <input type="text" id="views"/>
+                  
+                        <button type="button" onclick="addNEW()">Yüklə</button>
+
+
+                    </form>
+                </div>
+                
+            </div>
+        
+        </div>
+        <script src="../admin/admin.js"></script>
+    </body>
+
+
+</html>
