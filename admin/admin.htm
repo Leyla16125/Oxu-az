@@ -24,6 +24,7 @@
                             <th>Tarix</th>
                             <th>Baxış sayı</th>
                             <th>Sil</th>
+                            <th>Düzəliş et</th>
                         </tr>
                     </thead>
 
@@ -32,13 +33,13 @@
                     </tbody>
                 </table>
 
-                <div id="formContainer" class="hidden">      
+                <div id="formContainer" class="hidden" onclick="toggleForm()">      
                
-                    <form>
+                    <form onclick="event.stopPropagation()">
                         <div id="formHeader">
                             <h2>Xəbər yerləşdir</h2>
                             <i onclick="toggleForm()" class="fa-solid fa-xmark"></i>
-                          </div>
+                        </div>
                           
                         <label>Başlıq əlavə et:</label>
                         <input type="text" id="title" />
@@ -55,7 +56,7 @@
                         <label>Baxış sayı:</label>
                         <input type="text" id="views"/>
                   
-                        <button type="button" onclick="addNEW()">Yüklə</button>
+                        <button id="btn" type="button" onclick="addNEW()">Yüklə</button>
 
 
                     </form>
